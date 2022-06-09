@@ -4,11 +4,6 @@
 <SearchBar />
    <ul>
    {{#each @model as |person|}}
-      {{!-- <li>
-        {{this.fullName}}
-        <LinkTo @route="user" @model={{person}}>{{person.givenName}} <small>{{person.familyName}}</small></LinkTo>
-      </li> --}}
-  {{!-- {{debugger}} --}}
   <Person @people={{person}}/>
   {{/each}}
  </ul>
