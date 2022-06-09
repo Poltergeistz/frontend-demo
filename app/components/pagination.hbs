@@ -1,0 +1,31 @@
+{{yield}}
+Page : {{@currentPage}}
+<button type="button" {{on "click" @fnPrevPage}}>Previous</button>
+<button type="button" {{on "click" @fnNextPage}}>Next</button>
+<button type="button" {{on "click" @fnFirstPage}}>First page</button>
+<button type="button" {{on "click" @fnLastPage}}>Last page</button>
+{{!-- Current page : {{@currentPage}}
+Next page : {{@nextPage}}
+Previous page : {{@prevPage}} --}}
+ <AuToolbar
+      @border="top"
+      @size="large"
+      @nowrap={{true}}
+    >
+      <div class="au-c-pagination">
+        <div class="au-c-pagination__list-item">
+          <AuButton @route="page" @skin="link" @icon="nav-left" @iconAlignment="left" {{on "click" @fnPrevPage}}>Vorige pagina</AuButton>
+        </div>
+        <p>
+          <span class="au-u-hidden-visually">Resultaten</span>
+          <strong>
+            1 - 20
+          </strong>
+          van
+          910
+        </p>
+        <div class="au-c-pagination__list-item">
+          <AuButton @route="page" @skin="link" @icon="nav-right" @iconAlignment="right" {{on "click" @fnNextPage}}>Volgende pagina</AuButton>
+        </div>
+      </div>
+    </AuToolbar>

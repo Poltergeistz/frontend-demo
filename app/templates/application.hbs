@@ -1,7 +1,53 @@
 {{page-title "FrontendDemoTwo"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+<AuMainHeader
+      @brandLink="/"
+      @appTitle="Frontend-demo"
+      @homeRoute={{this.homeRoute}}
+      @contactRoute={{this.contactRoute}}
+    >
+      <AuDropdown @title="Demo dropdown" @buttonLabel="Account settings" @alignment="right">
+        <AuButton @skin="tertiary" role="menuitem">
+          <AuIcon @icon="logout" @alignment="left" />Afmelden
+        </AuButton>
+      </AuDropdown>
+    </AuMainHeader>
+<div class="au-u-padding">
+  <nav>
+  <ul>
+<li>
+  <LinkTo @route="person">List Of People</LinkTo>
+</li>
+<li>
+  <LinkTo @route="mandatarissen">List Of Mandatarissen</LinkTo>
+</li>
+<li>
+  <LinkTo @route="contact-point">ContactPoint</LinkTo>
+</li>
+<li>
+  <LinkTo @route="mandaten">Mandaten</LinkTo>
+</li>
+</ul>
+</nav>
+<AuHr
+  @size={{this.size}}
+/>
 {{outlet}}
+
+</div>
+<AuMainFooter>
+      <AuHeading @level="3" @skin="4">
+        Gelinkt-notuleren.lblod.info is een officiële website van de Vlaamse overheid
+      </AuHeading>
+      <AuContent @skin="small">
+        <p>Uitgegeven door <a class="au-c-link" href="https://www.vlaanderen.be/organisaties/administratieve-diensten-van-de-vlaamse-overheid/beleidsdomein-kanselarij-en-bestuur/agentschap-binnenlands-bestuur">Agentschap Binnenlands Bestuur</a></p>
+        <ul class="au-c-list-horizontal">
+          <li class="au-c-list-horizontal__item">
+            <AuLink @route="" @skin="secondary">Disclaimer</AuLink>
+          </li>
+          <li class="au-c-list-horizontal__item">
+            <AuLink @route="" @skin="secondary">Cookieverklaring</AuLink>
+          </li>
+        </ul>
+      </AuContent>
+    </AuMainFooter>

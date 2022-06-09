@@ -1,0 +1,16 @@
+{{!-- <h4>{{this.fullName}}</h4>
+<button type="button" {{on 'click' this.sayHello}}>
+<p>{{this.text}}</p>
+</button>
+{{#each @people as |people|}}
+{{people.givenName}}
+{{/each}} --}}
+{{!-- <hr />
+<h3>Person component</h3> --}}
+<nav>
+<li>
+<LinkTo @route="user" @model={{@people}}>{{@people.givenName}} {{@people.familyName}}</LinkTo><br />
+</li>
+</nav>
+{{!-- person component end
+<hr /> --}}

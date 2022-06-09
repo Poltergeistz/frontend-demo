@@ -1,0 +1,20 @@
+{{page-title "ContactPoint"}}
+<h3>This is contact point route</h3>
+{{#each @model as |contact|}}
+    <AuList
+      @direction={{this.direction}}
+      @divider={{this.divider}}
+      as |Item|
+    >
+    <AuHr
+      @size={{this.size}}
+    />
+      <Item>
+        {{contact.telefoon}}
+      </Item>
+      <Item>
+        {{contact.email}}
+      </Item>
+    </AuList>
+{{/each}}
+{{outlet}}

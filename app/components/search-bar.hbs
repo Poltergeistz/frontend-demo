@@ -1,0 +1,37 @@
+this is my searchbar component
+<p>I am looking for all people that include the word : {{this.value}}</p>
+{{!-- TODO: Align the button with the input --}}
+<AuFormRow
+      @alignment={{this.alignment}}
+    >
+      <AuLabel for="input">
+        Search
+      </AuLabel>
+      <AuInput id="input" @value={{this.value}} />
+    <AuButton
+      class="au-u-margin-top au-u-margin-bottom"
+      @skin={{this.skin}}
+      @size={{this.size}}
+      @icon={{this.icon}}
+      @iconAlignment={{this.iconAlignment}}
+      @hideText={{this.hideText}}
+      @width={{this.width}}
+      @alert={{this.alert}}
+      @disabled={{this.disabled}}
+      @loading={{this.loading}}
+      {{on "click" this.searchByName}}
+    >
+      Filter
+    </AuButton>
+</AuFormRow>
+    {{#if this.filteredPeople.length}}
+    <h2>Results by {{this.filteredPeople.length}}</h2>
+    {{/if}}
+{{#each this.filteredPeople as |filteredPeople|}}
+<LinkTo @route="user" @model={{filteredPeople.id}}>{{filteredPeople.givenName}} {{filteredPeople.familyName}}</LinkTo><br />
+{{/each}}
+<AuHr
+  @size={{this.size}}
+/>
+  {{!-- <button type="button" >Filter</button> --}}
+{{yield}}

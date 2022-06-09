@@ -1,0 +1,38 @@
+{{page-title "Mandatarissen"}}
+<h3>Mandatarissen route</h3>
+{{#each @model as |mandatarissen|}}
+{{!-- <article>
+<small>Start : {{mandatarissen.start}}</small>
+<small>End :{{mandatarissen.einde}}</small>
+<a href={{mandatarissen.uri}}>{{mandatarissen.uri}}</a>
+{{mandatarissen.mandatarissenId}}
+</article> --}}
+<AuTable
+      @size={{this.size}}
+    >
+      <:title>Mandatarissen</:title>
+      <:header>
+        <tr>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+      </:header>
+      <:body>
+        <tr>
+          <td>{{mandatarissen.start}}</td>
+          <td>{{mandatarissen.einde}}</td>
+        </tr>
+      </:body>
+      <:footer>
+        <tr>
+          <td>Link to</td>
+          <td><a href={{mandatarissen.uri}}>{{mandatarissen.uri}}</a></td>
+        </tr>
+      </:footer>
+    </AuTable>
+    <AuHr
+      @size={{this.size}}
+    />
+{{/each}}
+
+{{outlet}}

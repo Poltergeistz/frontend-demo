@@ -1,0 +1,16 @@
+{{page-title "Person"}}
+<h2>This is the /person route</h2>
+<h3 class="au-u-h2">List of People</h3>
+<SearchBar />
+   <ul>
+   {{#each @model as |person|}}
+      {{!-- <li>
+        {{this.fullName}}
+        <LinkTo @route="user" @model={{person}}>{{person.givenName}} <small>{{person.familyName}}</small></LinkTo>
+      </li> --}}
+  {{!-- {{debugger}} --}}
+  <Person @people={{person}}/>
+  {{/each}}
+ </ul>
+<Pagination @people={{@model}} @currentPage={{this.page}} @fnNextPage={{this.nextPage}} @fnPrevPage={{this.prevPage}} @fnLastPage={{this.lastPage}} @fnFirstPage={{this.firstPage}}/>
+{{outlet}}

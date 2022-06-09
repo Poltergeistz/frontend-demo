@@ -1,0 +1,13 @@
+{{page-title "Mandaten"}}
+This is /mandaten route
+<ul>
+{{#each @model as |mandaten|}}
+<li>
+ID : {{mandaten.id}} - <a href={{mandaten.uri}}>{{mandaten.uri}}</a>
+</li>
+<AuHr
+  @size={{this.size}}
+/>
+{{/each}}
+</ul>
+{{outlet}}
