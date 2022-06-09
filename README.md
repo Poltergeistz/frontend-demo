@@ -54,3 +54,25 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+
+### Recap of the project
+
+#### What I've learned
+- How to build components.
+- How to query data from the store with ember-data.
+- How pass props to components.
+- How to serialize attributes.
+- How to make transforms for custom attributes like phone number.
+- How retreive data from the query parameters.
+- How to make a simple pagination.
+- How to make custom inflectors.
+- How create and use actions.
+- Conditions.
+- How to create routes.
+- How to use some event listeners.
+
+#### What I'd like to learn more and feel less confident about
+- Model relationships.
+- Ember-data-table.
+- Writing tests ! 
